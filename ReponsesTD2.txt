@@ -1,0 +1,101 @@
+EXERCICE 1
+
+1. 42
+   42
+   24
+   24
+   24
+   24
+
+2. Il a accès à deux méthodes meth()
+   S'il est dans le main, on a accès à une seule mais cela dépend de l'implémentation de la méthode
+
+3. Dans l'héritage on hérite que des méthodes instance et pas celles static
+Donc si on appelle meth() avec une Fille ça affiche 42 car elle n'a accès qu'a la méthode la classe mère. On aurait
+   42
+   42
+   24
+   42
+   42
+   42 
+
+4. Si ce sont des champs (=attributs), on a le même affichage qu'en question 3.  
+
+
+EXERCICE 2
+
+1. A la ligne 36, on doit changer la portée de e() en protected car on ne peut pas restreindre la portée dans une classe fille.
+   A la ligne 54, la méthode miage n'est pas définie pour le type Mere
+   A la ligne 56, l'objet mereFille a comme type effectif Fille mais est déclaré en tant que Mere, pour qui la méthode miage n'est pas définie
+
+3. redéfinition signifie avoir deux méthodes avec le même nom et les mêmes paramètres, l'une des méthodes est dans la classe parente et l'autre dans la classe fille.
+   surcharge : la surcharge de fonction est utilisée dans une seule classe où vous avez le même nom de fonction mais un ensemble d’arguments différent pour chaque fonction.
+
+   La méthode a() est redéfinie et la méthode c() est surchargée. La méthode d() est surchargée dans Fille et redéfinie.
+   b() est est redéfinie. f() est redéfinie. j() est redéfinie. k() est redéfinie. l() est redéfinie. m() est redéfinie.
+
+4. 
+Miage 
+la methode miage de la classe Fille
+
+Miage  
+on a force le cast de l'objet mereFille en Fille. Ce qui permet l'accès à la méthode miage de Fille
+
+Mere_a 
+la méthode a() de la classe Mere
+
+Fille_a 
+ la méthode a() de Fille car le type effectif de mereFille est Fille
+
+Fille_a  
+la méthode a() de la classe Fille
+
+Fille_a 
+le type effectif de mereFille est Fille donc on utilise la méthode a() de Fille
+
+Fille_b(Fille) 
+ le type effectif de mereFille est Fille donc on utilise la méthode b() de Fille
+
+Mere_c
+ il utilise la seule méthode c() qui n'a pas de paramètres. C'est une méthode de Mere et mereFille est déclaré en Mere donc il y a accès
+
+Fille_c(Mere) 
+on appelle la méthode c de type effectif Fille avec comme paramètre un objet de type Mere
+
+Fille_c(Mere) 
+ on appelle la méthode c de type effectif Fille avec comme paramètre un objet de type Mere
+
+Fille_c(Mere)
+
+Fille_c(Fille) 
+on appelle la méthode c de Fille avec comme paramètre un objet de type Fille
+
+static Mere_d 
+ on appelle la méthode d() de la classe Mere
+
+static Mere_d  
+on appelle la méthode d() de la classe Mere car l'objet mereFille est déclaré en tant que Mere
+
+Mere_f  
+on appelle une méthode de Mère sur un objet de type Mere
+
+Mere_f  
+la classe Fille n'ayant pas de méthode printF redéfinie on utilise celle de la classe Mere 
+ 
+Fille_j 
+ mereFille est de type effectif Fille donc c'est la méthode j de Fille qui est appelée
+
+Mere_k  
+la classe Fille n'ayant pas de méthode k() redéfinie, on appelle la méthode k() de Mere
+
+Fille_l  
+la méthode l() étant redéfinie dans la classe Fille, on appelle celle ci sur l'objet mereFille de type effectif Fille
+
+Fille_m 
+la méthode m() étant redéfinie dans la classe Fille, on appelle celle ci sur l'objet mereFille de type effectif Fille
+   
+
+EXERCICE 3
+
+
+
